@@ -48,12 +48,18 @@ mono_crash.*
 .vscode/
 .gradle/
 .consulo/
+.agents/
 .claude/
 .codex/
 .utmp/
 .vsconfig
 .github_upload_backup/
 *.DotSettings.user
+
+# Local Codex backups
+[Bb]ackups/
+*.bak
+*.bak.meta
 
 # OS files
 .DS_Store

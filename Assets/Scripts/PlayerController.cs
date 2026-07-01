@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float dodgeDistance = 15f;
     public float dodgeDuration = 0.3f;   // 회피 지속 시간
     public float dodgeCooldown = 1f;     // 회피 쿨다운
+    public bool ignoreDamageForTest = false; // 테스트용 무적 판정
 
     public Button dodgeButton;   // 회피 버튼
 
@@ -170,6 +171,7 @@ public class PlayerController : MonoBehaviour
 
     public void DamageReact()
     {
+        if (ignoreDamageForTest) return; // 테스트용 무적
         if (isDodging) return; // 회피 중 무적
 
         float hp = anim.GetFloat("FHp");
